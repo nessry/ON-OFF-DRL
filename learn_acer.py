@@ -140,7 +140,6 @@ directory = "ACER_preTrained" + '/' + 'resource_allocation' + '/'
 checkpoint_path = directory + "ACER256_{}_{}_{}.pth".format('resource_allocation', random_seed, run_num_pretrained)
 print("loading network from : " + checkpoint_path)
 model = ActorCritic(args.n_servers * args.n_resources + args.n_resources + 1, args.n_servers).to(device)
-#model.load_state_dict(torch.load(checkpoint_path, map_location=lambda storage, loc: storage))
 optimizer = optim.Adam(model.parameters())
 capacity = 10000
 max_episode_length = 200
