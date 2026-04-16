@@ -19,7 +19,7 @@ parser.add_argument('-P_0', type=int, default=87)
 parser.add_argument('-P_100', type=int, default=145)
 parser.add_argument('-T_on', type=int, default=30)
 parser.add_argument('-T_off', type=int, default=30)
-args = parser.parse_args()
+args, _ = parser.parse_known_args()
 
 
 
